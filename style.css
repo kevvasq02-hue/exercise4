@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  background-color: #07111f;
+  color: #dbe7ef;
+  font-family: Georgia, serif;
+}
+
+header {
+  padding: 30px 6%;
+}
+
+header p {
+  margin: 0;
+  color: #80a3ba;
+  font-family: "Courier New", monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 5px 0 0;
+  font-size: 52px;
+  font-weight: normal;
+}
+
+#city-scene {
+  position: relative;
+  width: 90%;
+  height: 720px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #111e2e;
+  border: 1px solid #496579;
+}
+
+.photo {
+  display: block;
+  position: absolute;
+  border: 6px solid #dbe7ef;
+  box-shadow: 0 8px 20px #000000;
+  filter: grayscale(70%) brightness(60%);
+}
+
+#sky {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border: 0;
+  opacity: 0.45;
+}
+
+#skyline {
+  top: 70px;
+  left: 22%;
+  width: 56%;
+  z-index: 1;
+}
+
+#city-lights {
+  top: 325px;
+  left: 12%;
+  width: 50%;
+  z-index: 3;
+  transform: rotate(-3deg);
+}
+
+#street {
+  right: 4%;
+  bottom: 35px;
+  width: 38%;
+  z-index: 2;
+  transform: rotate(3deg);
+}
+
+#archway {
+  left: 3%;
+  top: 225px;
+  width: 21%;
+  z-index: 4;
+  transform: rotate(-2deg);
+}
+
+#bicycle {
+  right: 3%;
+  top: 185px;
+  width: 31%;
+  z-index: 4;
+  transform: rotate(4deg);
+}
+
+#walkers {
+  left: 34%;
+  bottom: 18px;
+  width: 25%;
+  z-index: 5;
+  transform: rotate(-1deg);
+}
+
+#water {
+  left: 7%;
+  bottom: 20px;
+  width: 19%;
+  z-index: 5;
+  transform: rotate(2deg);
+}
+
+#city-caption {
+  position: absolute;
+  right: 6%;
+  top: 28px;
+  z-index: 6;
+  color: #f4e8be;
+  font-size: 23px;
+  font-style: italic;
+  text-align: right;
+}
+
+#moon {
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 7%;
+  width: 55px;
+  height: 55px;
+  background-color: #f4e8be;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #f4e8be;
+}
+
+footer {
+  padding: 25px 6% 50px;
+  color: #80a3ba;
+  font-family: "Courier New", monospace;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  #city-scene {
+    height: auto;
+    padding: 15px;
+  }
+
+  .photo {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-width: 3px;
+    transform: none !important;
+  }
+
+  #sky {
+    display: none;
+  }
+
+  #city-caption, #moon {
+    position: static;
+    display: block;
+    margin: 15px 0 25px;
+    text-align: left;
+  }
+}
